@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>精美js聊天窗口界面代码</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/reset.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="left">
+            <div class="top">
+                <input type="text" placeholder="搜索" />
+                <a href="javascript:;" class="search"></a>
+            </div>
+            <ul class="people">
+                <li class="person" data-chat="person1">
+                    <img src="./imgs/thomas.jpg" alt="" />
+                    <span class="name">大力水手</span>
+                    <span class="time">2:09 PM</span>
+                    <span class="preview">我想知道...</span>
+                </li>
+                <li class="person" data-chat="person2">
+                    <img src="./imgs/dog.png" alt="" />
+                    <span class="name">在东北玩泥巴</span>
+                    <span class="time">1:44 PM</span>
+                    <span class="preview">我想问问有关数学课程的情况</span>
+                </li>
+                <li class="person" data-chat="person3">
+                    <img src="./imgs/louis-ck.jpeg" alt="" />
+                    <span class="name">Liquor</span>
+                    <span class="time">2:09 PM</span>
+                    <span class="preview">但我可能需要一个答疑老师.</span>
+                </li>
+                <li class="person" data-chat="person4">
+                    <img src="./imgs/bo-jackson.jpg" alt="" />
+                    <span class="name">呼呼呼</span>
+                    <span class="time">2:09 PM</span>
+                    <span class="preview">还好吧，情况不是很坏...</span>
+                </li>
+                <li class="person" data-chat="person5">
+                    <img src="./imgs/michael-jordan.jpg" alt="" />
+                    <span class="name">L梦の鱼</span>
+                    <span class="time">2:09 PM</span>
+                    <span class="preview">
+                            三个课程一起买有什么优惠吗
+                        </span>
+                </li>
+                <li class="person" data-chat="person6">
+                    <img src="./imgs/drake.jpg" alt="" />
+                    <span class="name">Drake</span>
+                    <span class="time">2:09 PM</span>
+                    <span class="preview">真理惟一可靠的标准就是永远自相符合</span>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="top"><span>To: <span class="name">在东北玩泥巴</span></span>
+            </div>
+            <div class="chat" data-chat="person1">
+                <div class="conversation-start">
+                    <span>今天, 6:48 AM</span>
+                </div>
+                <div class="bubble you">
+                    你好,
+                </div>
+                <div class="bubble you">
+                    是我啊.
+                </div>
+                <div class="bubble you">
+                    我想知道...
+                </div>
+            </div>
+            <div class="chat" data-chat="person2">
+                <div class="conversation-start">
+                    <span>今天, 5:38 PM</span>
+                </div>
+                <div class="bubble you">
+                    在不在
+                </div>
+                <div class="bubble you">
+                    我想问个问题
+                </div>
+                <div class="bubble me">
+                    您好，您说，这边尽力帮您解决
+
+                </div>
+                <div class="bubble me">
+                    请您把问题描述一遍
+                </div>
+                <div class="bubble you">
+                    我感觉课程讲的很好，三个一起买有优惠吗 ...
+                </div>
+                <div class="bubble you">
+                    我想问问大约多少
+
+                </div>
+            </div>
+            <div class="chat" data-chat="person3">
+                <div class="conversation-start">
+                    <span>今天, 3:38 AM</span>
+                </div>
+                <div class="bubble you">
+                    Hey!
+                </div>
+                <div class="bubble you">
+                    嗯……我集合有点懵。
+
+                </div>
+                <div class="bubble me">
+                    ... 关于哪方面呢？
+                </div>
+                <div class="bubble me">
+                    我给您找相应的老师?
+                </div>
+                <div class="bubble you">
+                    我想想...
+                </div>
+                <div class="bubble you">
+                    我感觉从基础开始就有点难...
+                </div>
+                <div class="bubble you">
+                    但我可能需要一个一对一老师。
+
+                </div>
+            </div>
+            <div class="chat" data-chat="person4">
+                <div class="conversation-start">
+                    <span>昨天, 4:20 PM</span>
+                </div>
+                <div class="bubble you">
+                    唉
+                </div>
+                <div class="bubble you">
+
+                    简直是糟糕的一天...
+                </div>
+                <div class="bubble me">
+                    ... 怎么了？.
+
+                </div>
+                <div class="bubble me">
+
+                    嗯……我错了好多题，好烦。
+                </div>
+                <div class="bubble you">
+
+                    没事的，都会有这一步，慢慢就好了，加油！
+                </div>
+
+            </div>
+            <div class="chat" data-chat="person5">
+                <div class="conversation-start">
+                    <span>今天, 6:28 AM</span>
+                </div>
+                <div class="bubble you">
+                    在吗
+                </div>
+                <div class="bubble you">
+                    在吗
+                </div>
+                <div class="bubble you">
+                    我需要三件东西：爱情友谊和图书。然而这三者之间何其相通！炽热的爱情可以充实图书的内容，图书又是人们最忠实的朋友
+                </div>
+            </div>
+            <div class="chat" data-chat="person6">
+                <div class="conversation-start">
+                    <span>星期五, 1:27 PM</span>
+                </div>
+                <div class="bubble you">
+                    有英语听力材料吗
+                </div>
+                <div class="bubble you">
+                    我想看看材料，听不太懂:D
+
+                </div>
+                <div class="bubble me">
+                    听力材料吗?
+                </div>
+                <div class="bubble me">
+                    稍等 这边给您找一下。
+
+                </div>
+                <div class="bubble you">
+                    嗯嗯，谢谢
+                </div>
+            </div>
+            <div class="write">
+                <a href="javascript:;" class="write-link attach"></a>
+                <input type="text" />
+                <a href="javascript:;" class="write-link smiley"></a>
+                <a href="javascript:;" class="write-link send"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/chat.js"></script>
+
+<!--这行代码可以去掉-->
+<a href="http://www.bootstrapmb.com" style="display:none">bootstrapmb</a>
+
+</body>
+
+</html>

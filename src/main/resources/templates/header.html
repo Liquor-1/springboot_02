@@ -1,0 +1,100 @@
+<script src = "../js/getParameter.js"></script>
+<script>
+    $(function () {
+        //查询用户信息
+        $.get("/user/findOne", {}, function (data) {
+            // console.log(data);
+                   var msg = "欢迎回来 " + " " + data.name;
+                   $("#span_username").html(msg);
+               });
+        //查询分类数据
+        $.get("/category/findAll", {}, function (data){
+            var lis = '<li class="nav-active"><a href="/user/test">首页</a></li>';
+            //遍历数组 拼接字符串
+            for (var i = 0; i < data.length; i++) {
+                var li = '<li><a href="/route_list.html?cid='+data[i].cid+'">'+data[i].cname+'</a></li>';
+                lis += li;
+            }
+            lis += '<li><a href="javascript:myFavorite();">购物车</a></li>';
+            $("#category").html(lis);
+        });
+
+        $("#search-button").click(function () {
+                var rname = $("#search_input").val();
+                var cid = getParameter("cid");
+                location.href = "/route_list.html?cid="+cid+"&cname="+rname;
+
+        })
+
+        //跳转客服
+        $(".hottel").click(function () {
+            location.href ="/chat.html";
+        })
+    })
+    function myFavorite() {
+        $.get("/user/findOne",{},function (user) {
+            if(user != null){
+                location.href = "/user/favoriterank";
+            }else {
+                alert("您尚未登录,请先登录");
+                location.href="/user/log";
+            }
+        })
+    }
+</script>
+<!-- 头部 start -->
+<header id="header">
+
+    <div class="shortcut">
+        <!-- 未登录状态  -->
+        <div class="login_out">
+            <a href="/user/log">登录</a>
+            <a href="/user/reg">注册</a>
+        </div>
+        <!-- 登录状态  -->
+        <div class="login">
+            
+            <span id="span_username"></span>
+            <a href="/user/myfavorite" class="collection">我的收藏</a>
+            <a href="javascript:location.href='/user/exit';">退出</a>
+        </div>
+    </div>
+    <div class="header_wrap">
+        <div class="topbar">
+            <div class="logo">
+                <a href="/"><img src="../images/logo2.jpg" style="width: 124px;height: 66px" alt=""></a>
+            </div>
+            <div class="search">
+                <input name="" type="text" id="search_input" placeholder="请输入课程名称" class="search_input" autocomplete="off">
+                <a href="javascript:;" id="search-button" class="search-button">搜索</a>
+            </div>
+            <div class="hottel">
+                <div class="hot_pic">
+                    <a href="#"><img src="../images/hot_tel.jpg" alt=""></a>
+                </div>
+                <div class="hot_tel">
+                    <p class="hot_time">客服热线(9:00-6:00)</p>
+                    <p class="hot_num">400-678-9090</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- 头部 end -->
+<!-- 首页导航 -->
+<div class="navitem" style="background-color: crimson">
+    <ul id="category" class="nav">
+        <li class="nav-active"><a href="/user/test">首页</a></li>
+        <li><a href="../static/route_list.html">a</a></li>
+        <li><a href="../static/route_list.html">b</a></li>
+        <li><a href="../static/route_list.html">c</a></li>
+        <li><a href="../static/route_list.html">d</a></li>
+        <li><a href="../static/route_list.html">课程</a></li>
+        <li><a href="../static/route_list.html">e</a></li>
+        <li><a href="../static/route_list.html">f</a></li>
+        <li><a href="../static/route_list.html">g</a></li>
+        <li><a href="/user/favoriterank">收藏排行榜</a></li>
+
+    </ul>
+</div>
+    
